@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Khan Academy Notes</title>
+        <style>
+            .apples {color: red;}
+            h1 {color:mediumblue;}
+            h2 {color:teal;}
+            h3 {color:slategrey}
+            p {color:maroon;
+                text-indent: 50px;
+                font-family: fantasy;}
+        </style>
+    </head>
+    <body>
+        <h1>Table of Contents</h1>
+        <ul>
+            <li><a href="#HTMLchap">HTML</a></li>
+            <li><a href="#startpattern">Page Start Pattern</a></li>
+            <li><a href="#html-textmanip">HTML Text Manipulation</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#images">Images</a></li>
+            <li><a href="#links">Creating Links</a></li>
+            <li><a href="#externallinks">External Links</a></li>
+            <li><a href="#internallinks">Internal Links</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#comment">Commenting</a></li>
+            <li><a href="#CSS">CSS (Cascading Style Sheets</a></li>
+            <li><a href="#typeselector">Types of Selectors</h2>
+            <li><a href="#html&css">Combining HTML & CSS</a></li>
+            <li><a href="#fontfamily">Font Families</a></li>
+            <li><a href="#fontproperties">Font Properties</a></li>
+        </ul>
+
+
+
+        <h1 id="HTMLchap">HTML</h1>
+
+        <h2 id="startpattern">Page Start Pattern</h2>
+        <code>
+            &lt;!DOCTYPE html&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;html&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt; helps browser render page, not seen<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf8"&gt; more details on how to render Page<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Poem&lt;/title&gt; (used by browser to determine title of url)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt; (for CSS properties)&lt;/style&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+            
+            &lt;body&gt; (text that reader will see)&lt;/body&gt;<br>
+            &lt;/html&gt;<br>
+        </code>  
+
+        <h2 id="html-textmanip">HTML Text Manipulation</h2>
+        <code>
+            <ul>
+                <li>Italics: &lt;em&gt;&lt;/em&gt;</li>
+                <li>Bold: &lt;strong&gt;&lt;/strong&gt;</li>
+                <li>Strike-through: &lt;del&gt;&lt;/del&gt;</li>
+                <li>Superscript: &lt;sup&gt;&lt;/sup&gt;</li>
+                <li>Subscript: &lt;sub&gt;&lt/sub&gt;</li>
+                <li>Underline: &lt;ins&gt;&lt;/ins&gt;</li>
+            </ul>       
+        </code>
+
+        <h2 id="lists">Lists</h2>
+            <h3>Unordered</h3>
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;list item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;list item&lt;/li&gt;<br>
+            &lt;/ul&gt;<br>
+
+            <h3>Ordered</h3>
+                &lt;ol&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;list item #1&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;list item #2&lt;/li&gt;<br>
+                &lt;/ol&gt;<br>
+
+        <h2 id="images">Images</h2>
+            <ul>
+                <li>&lt;img src="url"&gt; basic image and will show "as is"</li>
+                <li>&lt;img src="url" attribute="text description"&gt; help vision impaired<br></li>
+                <li>&lt;img src="url" attribute="text description" width="200"&gt; to custom size image, can also use height but not both or lose aspect ratio</li>
+            </ul>
+        <h2 id="links">Creating Links</h2>
+
+        <h3 id="externallinks">External Links</h3>
+            &lt;a href="url"&gt;text for link&lt;/a&gt;<br>
+            
+            <h4>Open link in new page</h4>
+            &lt;a target="blank" href="url"&gt;text for link&lt;/a&gt;<br>
+
+            <h4>To Link Images</h4>
+            &lt;a target="blank" href="url"&gt;<br>
+            &lt;img src="url of image"&gt;<br>
+            text for link pic if wanted<br>
+            &lt;/a&gt;<br>
+    
+            <a target="blank" href="en.wikipedia.org/wiki/Mountain_biking">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/MtnBiking_SedonaMag.jpg/500px-MtnBiking_SedonaMag.jpg" attribute="man riding mountain bike in AZ desert" width="200"><br>
+            man riding in AZ desert</a>
+
+         <h3 id="internallinks">Internal Links</h3>
+
+            <h4>Reference</h4>
+            &lt;a href="#targedid"&gt;&lt;/a&gt;<br>
+            if in list: &lt;li&gt;&lt;a href="#targetid"&gt;&lt;/a&gt;&lt;/li&gt;<br>
+
+            <h4>Target</h4>
+            &lt;h2 id="targetid"&gt;title of heading or target&lt;/h2&gt;<br>
+
+        <h2 id="tables">Tables</h2>
+        &lt;table&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt; header for columns<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt; row in 'table'<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;column1 header&lt;/th&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;column2 header&lt;/th&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt; actual 'data'<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt; entering 'data' for row 1<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;row1 column1 'data'&lt;/td&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;row1 column2 'data'&lt;/td&gt;<br> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt; entering 'data' for row 1<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;row2 column1 'data'&lt;/td&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;row2 column2 'data'&lt;/td&gt;<br> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+        &lt;/table&gt;<br>
+        <h2 id="comment">Commenting</h2>
+        &lt;!-- Hello humans --&gt;<br>
+        &lt;!-- this is how and why I did what I did --&gt;<br>
+
+        <h1 id="CSS">CSS (Cascading Style Sheets)</h1>
+
+        CSS rules are contained within the &lt;head&gt; section after the &lt;title&gt;. Use &lt;style&gt;&lt;/style&gt;<br>
+        &lt;head&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf8"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Poem&lt;/title&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt; (<strong><em>for CSS properties</em></strong>)&lt;/style&gt;<br>
+        &lt;/head&gt;<br> 
+        
+        <h2 id="typeselector">Types of Selectors</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Selector Types</th>
+                            <th>CSS Rule</th>
+                            <th>Target ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Element Selector</td>
+                            <td>p {color: red;}</td>
+                            <td>all p elements</td>
+                        </tr>
+                        <tr>
+                            <td>By ID</td>
+                            <td>#rabbit-song {background-color: yellow;}</td>
+                            <td>&lt;p id="rabbit-song&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>By Class</td>
+                            <td>.song-lyrics {color: yellow;}</td>
+                            <td>&lt;p class="song-lyrics"&gt;</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+        <h2 id="html&CSS">Combining HTML & CSS</h2>
+            HTML and CSS can be combined to affect the appearance of text.<br>
+            CSS rule: .apples {color: red;}<br>
+            In body: &lt;strong class="apples"&gt;apples&lt;/strong&gt;<br>
+            <strong class="apples">apples</strong>
+
+        <h2 id="fontfamily">Font Families</h2>
+        CSS rule for the following paragraph:<br>
+        p {color:maroon;<br>
+            text-indent: 50px;<br>
+            font-family: fantasy;}<br>
+        <p> This is an example of using CSS and Font Families to change the text of a paragraph. This should be the fantasy 'font'
+        </p></body><br>
+        Specific fonts can be names, but make sure to include the font family in case that particular font does not exist on the client's computer.<br>
+        <em>For example:</em><br>
+        p {font-family: "Helvetica", sans-serif;}, Helvetica is the specific font, sans-serif is the font family.<br>
+
+        <h2 id="fontproperties">Font Properties</h2>
+        {font-weight: bold;}, <em>Use to bold sections so that you do not overdo &lt;strong&gt;&lt;/strong&gt;</em><br>
+        {font-style: italic;}, <em>Use to italic section so that you do not overdo &lt;em&gt;&lt;/em&gt;</em><br>
+        {font-size: 13px;}, <em>To size using pixels</em><br>
+        {font-size: 1.5em;}, <em>To size using a relative value in relation to the body text size.</em><br>
+        {line-height: 1.5em;}, <em>Adjust line height.</em><br>
+        {text-align: center;}, <em>To center align text.</em><br>
+        {text-decoration: underline;}, <em>To underline beginning text.</em><br>
+        
+        
+
+
+    </body>
+</html>
